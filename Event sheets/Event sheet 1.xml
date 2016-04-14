@@ -3,12 +3,16 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Event sheet 1</name>
     <events>
+        <variable constant="0" name="score" sid="2669165624034745" static="0" type="number">0</variable>
         <event-block sid="2176291970428481">
             <conditions>
                 <condition id="-1" name="Every tick" sid="1765793225587442" type="System" />
             </conditions>
             <actions>
                 <action id="-18" name="Rotate clockwise" sid="8902694887520816" type="EnemyRotate">
+                    <param id="0" name="Degrees">1</param>
+                </action>
+                <action id="-19" name="Rotate counter-clockwise" sid="3306302229876638" type="Player">
                     <param id="0" name="Degrees">1</param>
                 </action>
             </actions>
@@ -21,6 +25,32 @@
                 <action id="-3" name="Set position" sid="347509096037841" type="Player">
                     <param id="0" name="X">touch.X</param>
                     <param id="1" name="Y">touch.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9136475175351236">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="725501644696361" type="Player">
+                    <param id="0" name="Object">Collectable</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Add to" sid="5933160089503571" type="System">
+                    <param id="0" name="Variable">score</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-9" name="Destroy" sid="2698735016150934" type="Collectable" />
+            </actions>
+        </event-block>
+        <event-block sid="9490282700185214">
+            <conditions>
+                <condition id="-19" name="On destroyed" sid="2410474179082409" type="Collectable" />
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="6807805696273449" type="Collectable">
+                    <param id="0" name="Object">ParticlesWhite</param>
+                    <param id="1" name="Layer"> &quot;playerLayer&quot;</param>
+                    <param id="2" name="Image point">0</param>
                 </action>
             </actions>
         </event-block>

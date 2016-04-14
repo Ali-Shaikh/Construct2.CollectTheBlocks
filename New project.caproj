@@ -10,6 +10,7 @@
     <unique-id>2m2oqhlgof90t</unique-id>
     <saved-with-version>22100</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="Particles" version="1">Particles</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
     </used-plugins>
@@ -108,8 +109,20 @@
         <object-type name="Touch" sid="3879755730788441">
             <plugin id="Touch" />
         </object-type>
+        <object-type name="ParticlesWhite" sid="544329930797739">
+            <plugin id="Particles" />
+            <texture />
+        </object-type>
     </object-folder>
-    <families />
+    <families>
+        <family name="Enemies" plugin-id="Sprite" sid="4242489672442348">
+            <members>
+                <member>EnemyRotate</member>
+                <member>EnemySinHorizontal</member>
+                <member>EnemySinVertical</member>
+            </members>
+        </family>
+    </families>
     <layout-folder>
         <layout>Layout 1.xml</layout>
     </layout-folder>
