@@ -113,6 +113,10 @@
             <plugin id="Particles" />
             <texture />
         </object-type>
+        <object-type name="ParticlesBlack" sid="9100307539498818">
+            <plugin id="Particles" />
+            <texture />
+        </object-type>
     </object-folder>
     <families>
         <family name="Enemies" plugin-id="Sprite" sid="4242489672442348">

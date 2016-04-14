@@ -42,18 +42,6 @@
                 <action id="-9" name="Destroy" sid="2698735016150934" type="Collectable" />
             </actions>
         </event-block>
-        <event-block sid="9490282700185214">
-            <conditions>
-                <condition id="-19" name="On destroyed" sid="2410474179082409" type="Collectable" />
-            </conditions>
-            <actions>
-                <action id="0" name="Spawn another object" sid="6807805696273449" type="Collectable">
-                    <param id="0" name="Object">ParticlesWhite</param>
-                    <param id="1" name="Layer"> &quot;playerLayer&quot;</param>
-                    <param id="2" name="Image point">0</param>
-                </action>
-            </actions>
-        </event-block>
         <event-block sid="1447817601664748">
             <conditions>
                 <condition id="-6" name="Every X seconds" sid="5878153402971502" type="System">
@@ -96,6 +84,70 @@
                     <param id="1" name="Layer">&quot;playerLayer&quot;</param>
                     <param id="2" name="X">random(30,840)</param>
                     <param id="3" name="Y">random(30,450)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9365148992186173">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="382396246870128" type="System">
+                    <param id="0" name="Interval (seconds)">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="798631740568672" type="System">
+                    <param id="0" name="Object to create">Collectable</param>
+                    <param id="1" name="Layer">&quot;playerLayer&quot;</param>
+                    <param id="2" name="X">random(30,840)</param>
+                    <param id="3" name="Y">random(30,450)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7247275857425308">
+            <conditions>
+                <condition id="-18" name="On created" sid="6342680119265292" type="Enemies" />
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="206000805442378" type="System">
+                    <param id="0" name="Seconds">8</param>
+                </action>
+                <action id="-9" name="Destroy" sid="2135226468482813" type="Enemies" />
+            </actions>
+        </event-block>
+        <event-block sid="8374043800592546">
+            <conditions>
+                <condition id="-19" name="On destroyed" sid="5651402731287093" type="Enemies" />
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="9471900157536652" type="Enemies">
+                    <param id="0" name="Object">ParticlesBlack</param>
+                    <param id="1" name="Layer">&quot;playerLayer&quot;</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1533708481913122">
+            <conditions>
+                <condition id="-18" name="On created" sid="9250869690466732" type="Collectable" />
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="6665996077923732" type="System">
+                    <param id="0" name="Seconds">7</param>
+                </action>
+                <action id="-9" name="Destroy" sid="3309677566616776" type="Collectable" />
+            </actions>
+        </event-block>
+        <event-block sid="9490282700185214">
+            <conditions>
+                <condition id="-19" name="On destroyed" sid="2410474179082409" type="Collectable" />
+                <condition id="1" name="Is overlapping another object" sid="6831699770161389" type="Player">
+                    <param id="0" name="Object">Collectable</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="6807805696273449" type="Collectable">
+                    <param id="0" name="Object">ParticlesWhite</param>
+                    <param id="1" name="Layer"> &quot;playerLayer&quot;</param>
+                    <param id="2" name="Image point">0</param>
                 </action>
             </actions>
         </event-block>
