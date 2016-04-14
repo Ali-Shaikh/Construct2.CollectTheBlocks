@@ -2,5 +2,27 @@
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Event sheet 1</name>
-    <events />
+    <events>
+        <event-block sid="2176291970428481">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="1765793225587442" type="System" />
+            </conditions>
+            <actions>
+                <action id="-18" name="Rotate clockwise" sid="8902694887520816" type="EnemyRotate">
+                    <param id="0" name="Degrees">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1425135390929996">
+            <conditions>
+                <condition id="2" name="Is in touch" sid="1789171415955071" type="Touch" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="347509096037841" type="Player">
+                    <param id="0" name="X">touch.X</param>
+                    <param id="1" name="Y">touch.Y</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
 </c2eventsheet>
